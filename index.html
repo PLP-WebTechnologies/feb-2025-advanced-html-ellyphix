@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced HTML5 Multimedia Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header, footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #0d47a1;
+    }
+    ol {
+      padding-left: 2rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    table th, table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    form {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin: 0.5rem 0 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    input[type="submit"] {
+      background-color: #0d47a1;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #1565c0;
+    }
+    audio, video {
+      display: block;
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 640px;
+    }
+    @media (max-width: 600px) {
+      section {
+        padding: 1rem;
+      }
+      table, form {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Multimedia-Rich HTML5 Webpage</h1>
+  </header>
+
+  <section>
+    <h2>I. Topics Covered</h2>
+    <ol type="I">
+      <li>Images</li>
+      <li>Lists</li>
+      <li>Tables</li>
+      <li>Forms</li>
+      <li>Audio & Video</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>II. Image Showcase</h2>
+    <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg" alt="Nature View from Pexels">
+  </section>
+
+  <section>
+    <h2>III. Contact Directory</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Mobile</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Alice Mwangi</td><td>Nairobi</td><td>+254712345678</td><td>alice@example.com</td></tr>
+        <tr><td>Brian Omondi</td><td>Kisumu</td><td>+254798765432</td><td>brian@example.com</td></tr>
+        <tr><td>Caroline Njeri</td><td>Thika</td><td>+254701234567</td><td>caroline@example.com</td></tr>
+        <tr><td>Daniel Kiptoo</td><td>Eldoret</td><td>+254734567890</td><td>daniel@example.com</td></tr>
+        <tr><td>Esther Wanjiru</td><td>Nakuru</td><td>+254789012345</td><td>esther@example.com</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>IV. Registration Form</h2>
+    <form action="#">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" minlength="6" required>
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+      <label for="country">Country</label>
+      <select id="country" name="country" required>
+        <option value="">--Select--</option>
+        <option value="kenya">Kenya</option>
+        <option value="uganda">Uganda</option>
+        <option value="tanzania">Tanzania</option>
+      </select>
+      <p>Gender:</p>
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label><br><br>
+      <p>Interests:</p>
+      <input type="checkbox" id="coding" name="interests" value="Coding">
+      <label for="coding">Coding</label><br>
+      <input type="checkbox" id="music" name="interests" value="Music">
+      <label for="music">Music</label><br>
+      <input type="checkbox" id="travel" name="interests" value="Travel">
+      <label for="travel">Travel</label><br><br>
+      <input type="submit" value="Register">
+    </form>
+  </section>
+
+  <section>
+    <h2>V. Multimedia</h2>
+    <h3>Background Music</h3>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support audio playback.
+    </audio>
+    <h3>Introduction Video</h3>
+    <video controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+
+    <h3>Behind the Scenes</h3>
+    <video controls>
+      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+
+    <h3>More Inspiration from Pexels</h3>
+    <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Mountain View">
+    <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg" alt="Forest Path">
+    <img src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg" alt="Sunset Over Lake">
+    
+    <video controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 All rights reserved. Designed with ♥ in Kenya.</p>
+  </footer>
+</body>
+</html>
